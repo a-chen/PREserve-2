@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <!-- Angular -->
+    <script src="assets/lib/js/angular.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/lib/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/lib/css/bootstrap-theme.css">
+    <script src="assets/lib/js/bootstrap.js"></script>
+
+    <!-- Custom -->
+    <script src="assets/js/main.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Angular modules -->
+    <script src="app/app.module.js"></script>
+</head>
+<body>
+<!-- Header here -->
+<div class="wrapper">
+    <div ng-controller="customerController">
+        <span>{{customers}}</span>
+        <ul>
+            <li ng-repeat="customer in customers">
+                <span>{{customer.firstName}}</span>
+                <p>{{customer.lastName}}</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Footer here -->
+</body>
+</html>
+
+<!-- Project structure -->
+<!--
+app/
+----- shared/   // acts as reusable components or partials of our site
+---------- sidebar/
+--------------- sidebarDirective.js
+--------------- sidebarView.html
+---------- article/
+--------------- articleDirective.js
+--------------- articleView.html
+----- components/   // each component is treated as a mini Angular app
+---------- home/
+--------------- homeController.js
+--------------- homeService.js
+--------------- homeView.html
+---------- blog/
+--------------- blogController.js
+--------------- blogService.js
+--------------- blogView.html
+----- app.module.js
+----- app.routes.js
+assets/
+----- img/      // Images and icons for your app
+----- css/      // All styles and style related files (SCSS or LESS files)
+----- js/       // JavaScript files written for your app that are not for angular
+----- libs/     // Third-pa
