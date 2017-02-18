@@ -18,11 +18,18 @@
 
     <!-- Angular modules -->
     <script src="app/app.module.js"></script>
+    <script src="app/components/api.js"></script>
+    <!--<script src="app/components/delegate.js"></script>-->
+
+<!--    <script src="app/angularTut/invoice2.js"></script>
+    <script src="app/angularTut/finance2.js"></script>-->
 </head>
 <body>
 <!-- Header here -->
 <div class="wrapper">
-    <div ng-controller="customerController">
+
+    <div ng-controller="CustomerController">
+
         <span>{{customers}}</span>
         <ul>
             <li ng-repeat="customer in customers">
